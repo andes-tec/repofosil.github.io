@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>FósilRepo - Repositorio de imágenes de fósiles</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🦕 FósilRepo</h1>
+            <p>Repositorio paleontológico · UNSa · </p>
+            <p>Escuela de Geología</p>
+        </header>
+
+        <div class="toolbar">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="🔍 Buscar por título, descripción, ubicación o categoría...">
+            </div>
+            <div class="counter" id="resultCounter">Cargando...</div>
+        </div>
+
+        <div class="categories" id="categoriesContainer">
+            <button class="cat-btn active" data-cat="all">📚 Todos</button>
+        </div>
+
+        <div id="fossilListContainer" class="fossil-list">
+            <div class="loading">⛏️ Cargando fósiles desde la hoja de cálculo...</div>
+        </div>
+        
+        <footer>
+            <p>📌 Datos de Fosiles de la Cátedra de Paleontología</p>
+            <p>Universidad Nacional de Salta</p>
+            <p><small>🔧 By | Aquiles Gustavo Laura :: Año 2026</small></p>
+        </footer>
+    </div>
+
+    <!-- Modal para vista ampliada -->
+    <div id="fossilModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-img">
+                <img id="modalImage" src="" alt="fósil ampliado">
+            </div>
+            <div class="modal-info">
+                <h2 id="modalTitle"></h2>
+                <div class="modal-meta" id="modalMeta"></div>
+                <p id="modalDesc"></p>
+                <button class="close-modal" id="closeModalBtn">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
